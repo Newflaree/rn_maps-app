@@ -8,12 +8,19 @@ import {
 } from '../screens';
 
 
-const Stack = createStackNavigator();
+export type RootStackParams = {
+  LoadingScreen: undefined;
+  PermissionsScreen: undefined;
+  MapsScreen: undefined;
+}
+
+const Stack = createStackNavigator<RootStackParams>();
 
 export const StackNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName='LoadingScreen'
+      //initialRouteName='LoadingScreen'
+      initialRouteName='PermissionsScreen'
       screenOptions={{
         headerShown: false,
         cardStyle: {
