@@ -8,12 +8,16 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 // Navigation
 import { StackNavigator } from './presentation/navigation';
+// Providers
+import { PermissionsChecker } from './presentation/providers';
 
 
 export const MapsApp = () => {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <PermissionsChecker>
+        <StackNavigator />
+      </PermissionsChecker>
     </NavigationContainer>
   );
 }
