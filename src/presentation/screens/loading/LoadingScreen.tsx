@@ -1,5 +1,6 @@
 // React Native
 import {
+  ActivityIndicator,
   Text,
   View
 } from 'react-native';
@@ -7,8 +8,17 @@ import {
 
 export const LoadingScreen = () => {
   return (
-    <View>
-      <Text>LoadingScreen</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    >
+      <ActivityIndicator
+        size={ 30 }
+        color='black'
+      />
     </View>
   );
 }
